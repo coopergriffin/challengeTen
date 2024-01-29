@@ -36,13 +36,14 @@ async function generateLogo() {
   const svgContent = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
   ${shape.render()}
-  <text x="150" y="190" font-size="16" fill="${userInput.textColor}" text-anchor="middle">${userInput.text}</text>
+  <text x="150" y="100" font-size="16" fill="${userInput.textColor}" text-anchor="middle" dominant-baseline="middle">${userInput.text}</text>
 </svg>`;
 
   fs.writeFileSync('logo.svg', svgContent);
 
   console.log('Generated logo.svg');
 }
+
 
 function getShape(shapeType) {
   switch (shapeType) {
