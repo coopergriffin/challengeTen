@@ -1,4 +1,4 @@
 # Prerequisites
-*.d
+.DS_STORE
 node_modules/
 
