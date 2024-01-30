@@ -43,6 +43,7 @@ async function generateLogo() {
   const shape = getShape(userInput.shape);
   shape.setColor(userInput.shapeColor);
 
+  //Creates svg contents and adds the user inptu
   const svgContent = `<?xml version="1.0" encoding="UTF-8"?>
   		<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
   		${shape.render()}
@@ -69,4 +70,6 @@ function getShape(shapeType) {
   }
 }
 
+
+//Main function call 
 generateLogo();
